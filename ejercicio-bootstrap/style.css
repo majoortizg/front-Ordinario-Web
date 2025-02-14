@@ -12,6 +12,7 @@
     font-size: small;
 }
 
+
 .navbar-nav{
     display: flex;
     justify-content: center;
@@ -86,6 +87,49 @@
     overflow-x: auto !important;
     gap: 8px !important;
   }
+.titulotus{
+    color: #0b2e63;
+    font-family: "Encode Sans", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.card {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.card-img-top{
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Agranda la imagen un 10% */
+    cursor: pointer;
+}
+
+.card-title{
+    color: #0b2e63 !important;
+    font-family: "Encode Sans", sans-serif;
+    font-weight: 480 !important;
+    font-size: medium;
+}
+
+.card-text{
+    color: #0b2e63 !important;
+    font-family: "Encode Sans", sans-serif;
+    font-size: small;
+}
+
+.card-text1{
+    color: #27292d !important;
+    font-family: "Encode Sans", sans-serif;
+    font-size: small;
+
+}
 /* Línea debajo del texto en TODOS los enlaces y botones del dropdown 
 .blanco .nav-link::after,
 .blanco .dropdown-item::after {
