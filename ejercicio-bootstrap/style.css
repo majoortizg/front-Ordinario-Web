@@ -1,4 +1,4 @@
-/* Cambiar el color del texto del navbar */
+
 .blanco .nav-link {
     color: white !important;
     font-family: "Encode Sans", Sans-serif;
@@ -84,6 +84,7 @@
     overflow-x: auto !important;
     gap: 8px !important;
   }
+
 .titulotus{
     color: #0b2e63;
     font-family: "Encode Sans", sans-serif;
