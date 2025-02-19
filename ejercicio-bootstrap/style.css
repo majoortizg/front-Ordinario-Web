@@ -12,7 +12,6 @@
     font-size: small;
 }
 
-
 .navbar-nav{
     display: flex;
     justify-content: center;
@@ -62,7 +61,7 @@
 }
 
 .mi-boton:hover {
-    background-color: rgb(5, 12, 66) !important;
+    background-color: rgb(193, 150, 33) !important;
   }
   .boton-circular {
     width: 30px;
@@ -127,4 +126,15 @@
     font-family: "Encode Sans", sans-serif;
     font-size: small;
 
+}
+
+.cardlink:hover {
+    color: rgb(193, 150, 33) !important;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+a {
+    text-decoration: none !important;
 }
