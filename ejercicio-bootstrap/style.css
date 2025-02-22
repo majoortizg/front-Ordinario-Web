@@ -138,3 +138,20 @@
 a {
     text-decoration: none !important;
 }
+
+.parrafo {
+    font-family: "Roboto Slab", sans-serif;
+    text-align: center;
+    color: #0b2e63;
+    margin-right: 70px;
+    margin-left: 70px;
+}
+
+.margin {
+    margin-right: 70px;
+    margin-left: 70px;
+}
+
+.color-fondo {
+    background-color: #0b2e63;
+}
