@@ -72,16 +72,30 @@
 }
 
 .mi-boton {
-    font-family: Encode Sans, sans-serif;
     background-color: #0b2e63 !important;
     color: white;
     transition: background-color 0.3s ease-in-out !important;
     border: none !important;
 }
 
+.mi-boton2 {
+    font-family: "Encode Sans", sans-serif !important;
+    background-color: #0b2e63 !important;
+    color: white;
+    transition: background-color 0.3s ease-in-out !important;
+    border: none !important;
+    font-weight: bold !important;
+
+}
+
+.mi-boton2:hover {
+    background-color: rgb(193, 150, 33) !important;
+  }
+
 .mi-boton:hover {
     background-color: rgb(193, 150, 33) !important;
   }
+
   .boton-circular {
     width: 30px;
     height: 30px;
@@ -319,6 +333,24 @@ input:focus, textarea:focus {
     text-align: center;
     margin: auto;
 
+}
+
+.carusel-title {
+    font-family: Lora, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.carusel-text {
+    font-family: Lora, sans-serif;
+    color: #27292d;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0px 5px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(245, 245, 245, 0.7));
+    border-radius: 8px;
+    display: inline-block;
 }
 
 
