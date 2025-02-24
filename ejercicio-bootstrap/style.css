@@ -353,6 +353,31 @@ input:focus, textarea:focus {
     display: inline-block;
 }
 
+#Suscribete {
+    font-family: Encode Sans, sans-serif;
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 23px;
+}
+
+#parrafopromos {
+    font-family: Encode Sans, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#correo {
+    font-family: Poppins, sans-serif;
+    color: white;
+    font-size: small;
+}
+
+#telefono {
+    font-family: Poppins, sans-serif;
+    color: white;
+    font-size: small;
+}
 
 
 
