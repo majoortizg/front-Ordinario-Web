@@ -19,8 +19,26 @@
     width: 100%;
 }
 
+/* Primera Navbar */
+.navbar:first-of-type {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+}
+
+/* Segunda Navbar */
+.navbar:nth-of-type(2) {
+    position: sticky;
+    top: 78px; 
+    z-index: 1040; 
+}
+
 .nav-item {
     margin:0 30px;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 .blanco .dropdown-item:hover {
@@ -54,6 +72,7 @@
 }
 
 .mi-boton {
+    font-family: Encode Sans, sans-serif;
     background-color: #0b2e63 !important;
     color: white;
     transition: background-color 0.3s ease-in-out !important;
@@ -155,3 +174,154 @@ a {
 .color-fondo {
     background-color: #0b2e63;
 }
+
+.radio {
+    font-size: smaller;
+    color: #0b2e63;
+}
+
+.aereos {
+    font-weight: 450;
+    color: #52565f;
+}
+
+.input-aereos {
+    font-size: small;
+}
+
+.titulos-aereos {
+    color: #52565f;
+}
+  
+.carousel-item img {
+    height: 70vh; 
+    object-fit: cover;
+  }
+
+.text-box-forms {
+    font-size: 12px !important; /* Tamaño de la letra */
+    color: #0b2e63 !important; /* Color del texto */
+    font-family: "Arial", sans-serif !important; /* Tipo de letra */
+  }
+
+.check-box {
+    font-size: small;
+    color: #0b2e63;
+}
+
+.background-container {
+    background-image: url(../ejercicio-bootstrap/images/oaxaca.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.form-container {
+    background: white;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+
+input:focus, textarea:focus {
+    border-color: rgb(193, 150, 33) !important;
+    box-shadow: 0 0 4px rgb(161, 203, 208) !important;
+}
+
+.segunda-card {
+    height: 220px !important;
+    width: 100% !important;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px;
+}
+
+#miamicard {
+    background-image:linear-gradient(to bottom, rgb(45, 46, 148), transparent), url(../ejercicio-bootstrap/images/miami.avif) !important;
+    background-size: cover !important;
+    background-position: center;
+}
+
+#newyorkcard {
+    background-image:linear-gradient(to bottom, rgb(45, 46, 148), transparent), url(../ejercicio-bootstrap/images/nuevayork.avif) !important;
+    background-size: cover !important;
+    background-position: center;
+}
+
+#lasvegascard {
+    background-image:linear-gradient(to bottom, rgb(45, 46, 148), transparent), url(../ejercicio-bootstrap/images/lasvegas.jpg) !important;
+    background-size: cover !important;
+    background-position: center;
+}
+
+#losangelescard {
+    background-image:linear-gradient(to bottom, rgb(45, 46, 148), transparent), url(../ejercicio-bootstrap/images/losangeles.avif) !important;
+    background-size: cover !important;
+    background-position: center;
+}
+
+#santiagocard {
+    background-image:linear-gradient(to bottom, rgb(45, 46, 148), transparent), url(../ejercicio-bootstrap/images/santiago.jpg) !important;
+    background-size: cover !important;
+    background-position: center;
+}
+
+#cartagenacard {
+    background-image:linear-gradient(to bottom, rgb(45, 46, 148), transparent), url(../ejercicio-bootstrap/images/cartagena1.jpg) !important;
+    background-size: cover !important;
+    background-position: center;
+}
+
+#stmaartencard {
+    background-image:linear-gradient(to bottom, rgb(60, 61, 128), transparent), url(../ejercicio-bootstrap/images/stmaarten.webp) !important;
+    background-size: cover !important;
+    background-position: center;
+}
+
+#quitocard {
+    background-image:linear-gradient(to bottom, rgb(45, 46, 148), transparent), url(../ejercicio-bootstrap/images/quito.jpg) !important;
+    background-size: cover !important;
+    background-position: center;
+}
+
+#houstoncard {
+    background-image:linear-gradient(to bottom, rgb(45, 46, 148), transparent), url(../ejercicio-bootstrap/images/houston.jpg) !important;
+    background-size: cover !important;
+    background-position: center;
+}
+
+.segunda-card-title {
+    font-family: Montserrat, sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+    margin-bottom: -4px;
+}
+
+.segunda-card-text {
+    color: white;
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: lighter !important;
+}
+
+.segunda-card-btn {
+    font-family: Lora, sans-serif !important;
+    margin-top: 10px !important;
+    width: 150px !important;
+    display: block;
+    text-align: center;
+    margin: auto;
+
+}
+
+
+
+
+  
