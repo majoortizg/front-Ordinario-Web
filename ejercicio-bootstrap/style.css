@@ -332,7 +332,14 @@ input:focus, textarea:focus {
     display: block;
     text-align: center;
     margin: auto;
+}
 
+.segunda-card-btn:hover{
+    background-color: #9c3692 !important;
+    color: white !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none;
 }
 
 .carusel-title {
@@ -379,6 +386,24 @@ input:focus, textarea:focus {
     font-size: small;
 }
 
+.correo-tel {
+    font-size: medium !important;
+}
+
+.mi-boton3 {
+    font-family: "Encode Sans", sans-serif !important;
+    background-color: #0b2e63 !important;
+    color: white;
+    transition: background-color 0.3s ease-in-out !important;
+    border: none !important;
+    font-weight: bold !important;
+    border-radius: 30px !important;
+
+}
+
+.mi-boton3:hover {
+    background-color: rgb(193, 150, 33) !important;
+  }
 
 
   
