@@ -31,7 +31,7 @@
 </head>
 <body>
   <!--Empieza primera navbar-->
-  <nav class="navbar bg-body-tertiary sticky-top">
+  <nav class="navbar bg-body-tertiary sticky-top d-none d-lg-flex">
     <div class="container d-flex justify-content-between align-items-center w-100">
       <a class="navbar-brand" href="#">
         <img src="./images/amatetravel.png" alt="Bootstrap" width="400" height="52">
@@ -57,7 +57,7 @@
     <!--termina primera navbar-->
     <!--Empieza segunda navbar-->
   </nav>
-    <nav class="navbar navbar-expand-lg text-center blanco sticky-top color-fondo">
+    <nav class="navbar navbar-expand-lg text-center blanco sticky-top color-fondo d-none d-lg-flex">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,7 +107,7 @@
                   <li><a class="dropdown-item estilo" href="#">Paquetes en El Salvador</a></li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdow">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <img src="./images/maleta.png" width="19" height="19" style="margin-right: 10px;">Para Viajeros
                 </a>
@@ -229,8 +229,6 @@
           <!--Termina CheckBox-->
           <!--Termina Container Forms-->
         </div>
-  
-      
 
       <!--Empieza Titulo-->
       <h2 class="titulotus">Tus proximas vacaciones</h2>
@@ -299,7 +297,6 @@
     <!--Empieza Segunda-->
     <div class="container">
       <div class="row gap-3 justify-content-center">
-        <!-- Tarjeta 1 -->
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="segunda-card" id="miamicard">
             <div class="card-body">
@@ -310,7 +307,6 @@
           </div>
         </div>
         
-        <!-- Tarjeta 2 -->
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="segunda-card" id="newyorkcard">
             <div class="card-body">
@@ -321,7 +317,6 @@
           </div>
         </div>
     
-        <!-- Tarjeta 3 -->
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="segunda-card" id="lasvegascard">
             <div class="card-body">
@@ -332,7 +327,6 @@
           </div>
         </div>
     
-        <!-- Tarjeta 4 -->
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="segunda-card" id="losangelescard">
             <div class="card-body">
@@ -343,7 +337,6 @@
           </div>
         </div>
     
-        <!-- Tarjeta 5 -->
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="segunda-card" id="santiagocard">
             <div class="card-body">
@@ -354,7 +347,6 @@
           </div>
         </div>
     
-        <!-- Tarjeta 6 -->
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="segunda-card" id="cartagenacard">
             <div class="card-body">
@@ -365,7 +357,6 @@
           </div>
         </div>
     
-        <!-- Tarjeta 7 -->
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="segunda-card" id="stmaartencard">
             <div class="card-body">
@@ -376,7 +367,6 @@
           </div>
         </div>
     
-        <!-- Tarjeta 8 -->
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="segunda-card" id="quitocard">
             <div class="card-body">
@@ -404,7 +394,7 @@
     </div>
 
     <!--Empieza Carousel-->
-    <div id="carouselExampleCaptions" class="carousel slide">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -412,28 +402,29 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./images/turismo2.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
+          <img src="./images/turismo2.jpg" class="d-block w-100 carousel-img" alt="Islandia">
+          <div class="carousel-caption d-sm-block text-light bg-dark bg-opacity-50 rounded p-2">
             <h5 class="carusel-title">Noticias</h5>
             <p class="carusel-text">Islandia: el país más seguro del mundo para hacer turismo en 2025</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="./images/turismo1.jpeg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
+          <img src="./images/turismo1.jpeg" class="d-block w-100 carousel-img" alt="...">
+          <div class="carousel-caption d-sm-block text-light bg-dark bg-opacity-50 rounded p-2">
             <h5 class="carusel-title">Noticias</h5>
             <p class="carusel-text">España abrira sus puertas al turismo en julio</p>
           </div>
         </div>
         
         <div class="carousel-item">
-          <img src="./images/turismo3.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
+          <img src="./images/turismo3.jpg" class="d-block w-100 carousel-mg" alt="...">
+          <div class="carousel-caption d-sm-block text-light bg-dark bg-opacity-50 rounded p-2">
             <h5 class="carusel-title">Noticias</h5>
             <p class="carusel-text">Camboya pedirá $3,000 de deposito para entrar al país</p>
           </div>
         </div>
       </div>
+
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -444,7 +435,6 @@
       </button>
     </div>
     <!--Termina Carusel-->
-    
   </div>
 
   <!--Empieza Suscribete-->
@@ -479,7 +469,7 @@
   <!--Empieza Seccion Abajo-->  
   <div class="container">
     <div class="row g-5">
-      <div class="col-3 columna3">
+      <div class="col-12 col-md-6 col-lg-3 columna3">
         <h5 class="tercera-card-title">Contáctanos</h5>
         <img src="../ejercicio-bootstrap/images/amatetravel.png" width="300" height="35" alt="" style="padding-right: 30px; margin-bottom: 10px;">
         <p class="card-text" style="font-size: medium;">Estaremos encantados de ayudarte a orgainzar tu proximo viaje</p></a>
@@ -502,7 +492,7 @@
         </div>
         
       </div>
-      <div class="col-3 columna3">
+      <div class="col-12 col-md-6 col-lg-3 columna3">
         <h5 class="tercera-card-title">Servicios <img src="../ejercicio-bootstrap/images/services.png" alt="" height="28" width="25" style="padding-bottom: 5px;"></h5>
         <p class="card-text cardlink">Web Check-in</p></a>
         <p class="card-text cardlink">Rastreo de Vuelos</p></a>
@@ -512,7 +502,7 @@
         <p class="card-text cardlink">Agencias Afiliadas</p></a>
         <p class="card-text cardlink">Preguntas Frecuentes</p></a>
       </div>
-      <div class="col-3 columna3">
+      <div class="col-12 col-md-6 col-lg-3 columna3">
         <h5 class="tercera-card-title">Descubre <img src="../ejercicio-bootstrap/images/discover.png" alt="" height="24" width="22" style="padding-bottom: 5px;"></h5>
         <p class="card-text cardlink">Vuelos en Promociones</p></a>
         <p class="card-text cardlink">Traslados Aeropuerto</p></a>
@@ -522,7 +512,7 @@
         <p class="card-text cardlink">Autos</p></a>
         <p class="card-text cardlink">Blog</p></a>
       </div>
-      <div class="col-3 columna3">
+      <div class="col-12 col-md-6 col-lg-3 columna3">
         <h5 class="tercera-card-title">Vuelos <img src="../ejercicio-bootstrap/images/planeblack.png" alt="" height="23" width="21" style="padding-bottom: 5px;"></h5>
         <p class="card-text cardlink">Vuelos a Los Angeles</p>
         <p class="card-text cardlink">Vuelos a Miami</p></a>
