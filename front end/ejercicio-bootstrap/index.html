@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amate Travel</title>
+    <link rel="icon" type="image/png" href="./images/amate.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./htmls/cartagena.html">
+    <link rel="stylesheet" href="./htmls/cdmx.html">
+    <link rel="stylesheet" href="./htmls/portugal.html">
+    <link rel="stylesheet" href="./htmls/taxco.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS y Popper.js (necesario para el funcionamiento del modal) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+  <!--Empieza primera navbar-->
+  <nav class="navbar bg-body-tertiary sticky-top d-none d-lg-flex">
+    <div class="container d-flex justify-content-between align-items-center w-100">
+      <a class="navbar-brand" href="#">
+        <img src="./images/amatetravel.png" alt="Bootstrap" width="400" height="52">
+      </a>
+      
+      
+    
+    <div class="d-flex align-items-center gap-2">
+      <button id="logoutBtn" style="display: none;" class="btn btn-outline-danger">
+        <i class="fa-solid fa-sign-out-alt" style="margin-right: 8px;"></i>Cerrar sesión
+      </button>
+      <!-- Aquí agregamos el botón de iniciar sesión -->
+      <button class="btn btn-outline-primary mi-boton" style="color: white;" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+        <i class="fa-solid fa-user" style="margin-right: 8px; color: white;"></i>Iniciar Sesión
+      </button>
+      <button class="btn btn-primary me-md-2 mi-boton" type="button"><i class="fa-solid fa-phone"></i></button>
+      <a href="https://www.instagram.com/amatetravel/" target="_blank">
+      <button class="boton-circular mi-boton"><img src="./images/insta.png" width="15"></button></a>
+      <a href="https://x.com/amatetravel?mx=2" target="_blank">
+      <button class="boton-circular mi-boton"><img src="./images/twitter.png" width="15"></button></a>
+      <a href="https://www.youtube.com/@amatetravel6078" target="_blank">
+      <button class="boton-circular mi-boton"><img src="./images/youtube.png" width="15"></button></a>
+      <a href="https://www.linkedin.com/company/corporacion-turistica-el-amate/" target="_blank">
+      <button class="boton-circular mi-boton"><img src="./images/in.png" width="15"></button></a>
+      <a href="https://www.facebook.com/amatetravel/" target="_blank">
+      <button class="boton-circular mi-boton"><img src="./images/face.png" width="15"></button></a>
+      <a href="https://api.whatsapp.com/send?phone=50325107676&text=Necesito%20mas%20informaci%C3%B3n%20de%20Amate%20Travel%20-%20Amate%20Travel%20en%20https://amatetravel.com/" target="_blank">
+      <button class="boton-circular mi-boton"><img src="./images/wa.png" width="15"></button></a>
+    </div>
+  </nav>
+  <!-- Modal de Iniciar sesión -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="d-flex justify-content-between">
+              <button id="openLoginModal" class="btn btn-outline-primary mi-boton" style="color: white;" type="submit" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <i class="fa-solid fa-user" style="color: white; margin-right: 8px;"></i>Iniciar Sesión
+              </button>
+              <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <!--termina primera navbar-->
+    <!--Empieza segunda navbar-->
+  </nav>
+    <nav class="navbar navbar-expand-lg text-center blanco sticky-top color-fondo d-none d-lg-flex">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+              <div class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="./images/transport.png" alt="" width="15" height="15" style="margin-right: 10px;">Vuelos
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item estilo" href="#">Vuelos</a></li>
+                  <li><button class="dropdown-item estilo" href="#">Web Check-in</a></li>
+                  <li><button class="dropdown-item estilo" href="#">Vuelos en Promociones</a></li>
+                </ul>
+              </div>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="./images/hotelbell.png" width="18" height="18" style="margin-right: 10px;">Hoteles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="./images/car.png" width="18" height="18" style="margin-right: 10px;">Autos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="./images/healthcare.png" width="19" height="19" style="margin-right: 10px;">Seguros</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="./images/package.png" width="19" height="19" style="margin-right: 10px;">Paquetes
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item estilo" href="#">Aventura</a></li>
+                  <li><a class="dropdown-item estilo" href="#">Crucero</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item estilo" href="#">De Experiencia</a></li>
+                  <li><a class="dropdown-item estilo" href="#">De Lujo</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="./images/house1.png" width="19" height="19" style="margin-right: 10px;">El Salvador
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item estilo" href="#">Hoteles en El Salvador</a></li>
+                  <li><a class="dropdown-item estilo" href="#">Traslado Aeropuerto</a></li>
+                  <li><a class="dropdown-item estilo" href="#">Paquetes en El Salvador</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdow">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="./images/maleta.png" width="19" height="19" style="margin-right: 10px;">Para Viajeros
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item estilo" href="#">Blogs de Viaje</a></li>
+                  <li><a class="dropdown-item estilo" href="#">Guias de Viaje</a></li>
+                  <li><a class="dropdown-item estilo" href="#">Web Check-in</a></li>
+                  <li><a class="dropdown-item estilo" href="#">Rastreo de Vuelos</a></li>
+                  <li><a class="dropdown-item estilo" href="#">Maletas</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--termina segunda navbar-->
+
+
+    <div class="background-container"></div>
+    
+        <!--Empieza Container Forms-->
+        <div class="container d-flex justify-content-center align-items-center vh-100">
+          <div class="form-container p-4 shadow-lg rounded">
+
+            <!-- mostrar saludo después del login -->
+            <div style="width: 100%; text-align: center; margin-bottom: 7px;">
+              <span id="navbar-user" tabindex="-1" style="
+                display: inline-block;
+                font-weight: bold;
+                font-size: 18px;
+                color: #1a2a44;
+                padding: 5px 10px;
+                border-bottom: 3px solid #1a2a44;
+                border-radius: 0;
+                background-color: transparent;
+              "></span>
+            </div>
+            
+
+            <!--Empieza Radio-->
+            <h5 class="aereos">Aéreos</h5>     
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+              <label class="form-check-label radio" for="flexRadioDefault1">
+                Ida y Vuelta
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+              <label class="form-check-label radio" for="flexRadioDefault2">
+                Solo Ida
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+              <label class="form-check-label radio" for="flexRadioDefault3">
+                Multidestino
+              </label>
+            </div>
+            <!--Termina Radio-->
+
+            <!--Empieza Forms-->
+            <form id="formReservacion">
+              <div class="row g-3 align-items-center" style="margin-top: 3px">
+                
+                <!--Origen-->   
+                <div class="col">
+                  <label for="inputOrigen" class="form-label titulos-aereos">Origen:</label>
+                  <div class="input-group">
+                    <span class="input-group-text input-aereos">
+                      <img src="../ejercicio-bootstrap/images/loc.png" alt="Icono" width="18" height="18">
+                    </span>
+                    <input id="inputOrigenId" name="origen" class="form-control text-box-forms" placeholder="Ciudad de Origen" required>
+                  </div>
+                </div>
+
+                <!--Destino-->            
+                <div class="col">
+                  <label for="inputDestinoId" class="form-label titulos-aereos">Destino:</label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <img src="../ejercicio-bootstrap/images/loc.png" alt="Icono" width="18" height="18">
+                    </span>
+                    <input id="inputDestinoId" type="text" name="destino" class="form-control text-box-forms" placeholder="Ciudad de Destino" required>
+                  </div>
+                </div>
+            
+                <div class="col">
+                  <label for="inputFechaSalida" class="form-label titulos-aereos">Fecha de partida:</label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <img src="../ejercicio-bootstrap/images/calendar.png" alt="Icono" width="18" height="18">
+                    </span>
+                    <input id="inputFechaSalida" name="fecha_partida" type="date" class="form-control text-box-forms" required>
+                  </div>
+                </div>
+            
+                <div class="col">
+                  <label for="inputFechaRetorno" class="form-label">Fecha de regreso:</label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <img src="../ejercicio-bootstrap/images/calendar.png" alt="Icono" width="18" height="18">
+                    </span>
+                    <input id="inputFechaRetorno" name="fecha_regreso" type="date" class="form-control text-box-forms">
+                  </div>
+                </div>
+            
+                <div class="col">
+                  <label for="inputPasajeros" class="form-label titulos-aereos">Pasajeros:</label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <img src="../ejercicio-bootstrap/images/user.png" alt="Icono" width="18" height="18">
+                    </span>
+                    <input id="inputPasajeros" name="pasajeros" type="number" class="form-control text-box-forms" placeholder="1" required>
+                  </div>
+                </div>
+            
+                <!-- Botón de envío -->
+                <div class="col">
+                  <label class="form-label">&nbsp;</label>
+                  <button class="btn btn-primary me-md-2 mi-boton" type="button" id="btnEnviar">Enviar Reservación</button>
+                </div>
+              </div>
+            </form>
+            <!--Termina Forms-->
+
+            <!-- Aquí se mostrará el resultado -->
+             <div id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
+
+            <!--Empieza CheckBox-->
+            <div class="row g-3 align-items-center" style="margin-top: 3px">
+              <div class="form-check col-auto" style="margin-left: 12px;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label check-box" for="flexCheckDefault">
+                  Soy flexible con mis fechas de viaje
+                </label>
+              </div>
+              <div class="form-check col-auto" style="margin-left: 12px;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label check-box" for="flexCheckChecked">
+                  Solo vuelos que incluyan equipaje
+                </label>
+              </div>
+              <div class="form-check col-auto" style="margin-left: 12px;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label check-box" for="flexCheckChecked">
+                  Solo vuelos directos
+                </label>
+              </div>
+            </div>
+          </div>
+          <!--Termina CheckBox-->
+          <!--Termina Container Forms-->
+        </div>
+
+      <!--Empieza Titulo-->
+      <h2 class="titulotus">Tus proximas vacaciones</h2>
+      <!--Termina Titulo-->
+
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <!--Empieza Card-->
+      <div class="card" style="width: 18rem;">
+        <a href="./htmls/taxco.html" target="_blank">
+        <img src="./images/Taxco.webp" class="card-img-top" width="100" height="180" alt="..."></a>
+        <div class="card-body">
+          <p class="card-text1"><img src="./images/location.png" width="15" height="15" style="margin-right: 8px;">Taxco</p>
+          <a href="./htmls/taxco.html" target="_blank">
+          <h5 class="card-title cardlink">Taxco, Mexico San Valentin</h5></a>
+          <p class="card-text"><img src="./images/clock.png" width="15" height="15" style="margin-right: 8px;">4 dias 3 noches</p>
+          <p class="card-text"><img src="./images/flash.png" width="15" height="15" style="margin-right: 8px;">Desde $567.00</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <a href="./htmls/cdmx.html" target="_blank">
+        <img src="./images/cdmx.jpeg" class="card-img-top" width="100" height="180" alt="..."></a>
+        <div class="card-body">
+          <p class="card-text1"><img src="./images/location.png" width="15" height="15" style="margin-right: 8px;">Ciudad de Mexico</p>
+          <a href="./htmls/cdmx.html" target="_blank">
+          <h5 class="card-title cardlink">Ciudad de Mexico Semana Santa</h5></a>
+          <p class="card-text"><img src="./images/clock.png" width="15" height="15" style="margin-right: 8px;">5 dias 4 noches</p>
+          <p class="card-text"><img src="./images/flash.png" width="15" height="15" style="margin-right: 8px;">Desde $805.00</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <a href="./htmls/cartagena.html" target="_blank">
+          <img src="./images/cartagena.webp" class="card-img-top" width="100" height="180" alt="..."></a>
+          <div class="card-body">
+            <p class="card-text1"><img src="./images/location.png" width="15" height="15" style="margin-right: 8px;">Cartagena</p>
+            <a href="./htmls/cartagena.html" target="_blank">
+            <h5 class="card-title cardlink">Cartagena Semana Santa</h5></a>
+            <p class="card-text"><img src="./images/clock.png" width="15" height="15" style="margin-right: 8px;">5 dias 4 noches</p>
+            <p class="card-text"><img src="./images/flash.png" width="15" height="15" style="margin-right: 8px;">Desde $749.00</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <a href="./htmls/portugal.html" target="_blank">
+          <img src="./images/portugal.jpg" class="card-img-top" width="100" height="180" alt="..."></a>
+          <div class="card-body">
+            <p class="card-text1"><img src="./images/location.png" width="15" height="15" style="margin-right: 8px;">Portugal</p>
+            <a href="./htmls/portugal.html" target="_blank">
+            <h5 class="card-title cardlink">Portugal Semana Santa</h5></a>
+            <p class="card-text"><img src="./images/clock.png" width="15" height="15" style="margin-right: 8px;">4 dias 3 noches</p>
+            <p class="card-text"><img src="./images/flash.png" width="15" height="15" style="margin-right: 8px;">Desde $365.00</p>
+          </div>
+        </div>
+    </div>
+    <!--Termina Card-->
+
+    <!--Empieza Boton ver mas paquetes-->
+    <div class="d-flex flex-wrap justify-content-center mb-5">
+      <button class="btn btn-primary me-lg-2 mi-boton2 btn-lg" type="button">Ver más paquetes<img src="./images/rarrow.png" width="18px" style="margin-left: 8px;"></img></button>
+    </div>
+    <!--Termina Boton ver mas paquetes-->
+
+    <!--Empieza Titulo y parrafo Vuelos en oferta y promos-->
+    <h2 class="titulotus">Vuelos en Oferta y Promociones de ultimo momento</h2>
+    <p class="parrafo">Tenemos el viaje que mejor se adapta a ti. Tú pones los límites, creamos paquetes vacacionales donde podrás elegir número de días, precio o fecha de salida. Contamos con excelentes promociones a los mejores destinos para tus vacaciones.</p>
+    <!--Termina Titulo y parrafo Vuelos en oferta y promos-->
+
+    <!--Empieza Segunda-->
+    <div class="container">
+      <div class="row gap-3 justify-content-center">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="segunda-card" id="miamicard">
+            <div class="card-body">
+              <h5 class="segunda-card-title">Miami</h5>
+              <p class="segunda-card-text">Desde $172</p>
+              <button type="button" class="btn btn-outline-light segunda-card-btn">Reservar Ahora</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="segunda-card" id="newyorkcard">
+            <div class="card-body">
+              <h5 class="segunda-card-title">New York</h5>
+              <p class="segunda-card-text">Desde $222</p>
+              <button type="button" class="btn btn-outline-light segunda-card-btn">Reservar Ahora</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="segunda-card" id="lasvegascard">
+            <div class="card-body">
+              <h5 class="segunda-card-title">Las Vegas</h5>
+              <p class="segunda-card-text">Desde $441</p>
+              <button type="button" class="btn btn-outline-light segunda-card-btn">Reservar Ahora</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="segunda-card" id="losangelescard">
+            <div class="card-body">
+              <h5 class="segunda-card-title">Los Angeles</h5>
+              <p class="segunda-card-text">Desde $263</p>
+              <button type="button" class="btn btn-outline-light segunda-card-btn">Reservar Ahora</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="segunda-card" id="santiagocard">
+            <div class="card-body">
+              <h5 class="segunda-card-title">Santiago</h5>
+              <p class="segunda-card-text">Desde $611</p>
+              <button type="button" class="btn btn-outline-light segunda-card-btn">Reservar Ahora</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="segunda-card" id="cartagenacard">
+            <div class="card-body">
+              <h5 class="segunda-card-title">Cartagena</h5>
+              <p class="segunda-card-text">Desde $291</p>
+              <button type="button" class="btn btn-outline-light segunda-card-btn">Reservar Ahora</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="segunda-card" id="stmaartencard">
+            <div class="card-body">
+              <h5 class="segunda-card-title">St. Maarten</h5>
+              <p class="segunda-card-text">Desde $496</p>
+              <button type="button" class="btn btn-outline-light segunda-card-btn">Reservar Ahora</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="segunda-card" id="quitocard">
+            <div class="card-body">
+              <h5 class="segunda-card-title">Quito</h5>
+              <p class="segunda-card-text">Desde $299</p>
+              <button type="button" class="btn btn-outline-light segunda-card-btn">Reservar Ahora</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="segunda-card" id="houstoncard">
+            <div class="card-body">
+              <h5 class="segunda-card-title">Houston</h5>
+              <p class="segunda-card-text">Desde $222</p>
+              <button type="button" class="btn btn-outline-light segunda-card-btn">Reservar Ahora</button>
+            </div>
+          </div>
+        </div>
+        <!--Empieza Boton ver mas paquetes-->
+        <div class="d-flex flex-wrap justify-content-center mb-5">
+          <button class="btn btn-primary me-lg-2 mi-boton2 btn-lg" type="button" style="margin-top: 25px;">Ver más vuelos en Oferta<img src="./images/rarrow.png" width="18px" style="margin-left: 8px;"></img></button>
+        </div>
+        <!--Termina Boton ver mas paquetes-->
+    </div>
+
+    <!--Empieza Carousel-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/turismo2.jpg" class="d-block w-100 carousel-img" alt="Islandia">
+          <div class="carousel-caption d-sm-block text-light bg-dark bg-opacity-50 rounded p-2">
+            <h5 class="carusel-title">Noticias</h5>
+            <p class="carusel-text">Islandia: el país más seguro del mundo para hacer turismo en 2025</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/turismo1.jpeg" class="d-block w-100 carousel-img" alt="...">
+          <div class="carousel-caption d-sm-block text-light bg-dark bg-opacity-50 rounded p-2">
+            <h5 class="carusel-title">Noticias</h5>
+            <p class="carusel-text">España abrira sus puertas al turismo en julio</p>
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+          <img src="./images/turismo3.jpg" class="d-block w-100 carousel-mg" alt="...">
+          <div class="carousel-caption d-sm-block text-light bg-dark bg-opacity-50 rounded p-2">
+            <h5 class="carusel-title">Noticias</h5>
+            <p class="carusel-text">Camboya pedirá $3,000 de deposito para entrar al país</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--Termina Carusel-->
+  </div>
+
+  <!--Empieza Suscribete-->
+  <div class="container-fluid" style="background-color: #0b2e63;">
+
+    <h5 id="Suscribete">Suscríbete</h5>
+    <p id="parrafopromos">Promociones (cupones, descuentos, ofertas de última hora)</p>
+
+    <div class="row g-3 align-items-center justify-content-center" style="margin-top: 3px">
+      <div class="col-lg-4 col-md-6 col-sm-8">
+        <label for="inputOrigen" class="form-label titulos-aereos" id="correo">Correo Electrónico:</label>
+        <div class="input-group">  
+          <input id="inputCorreo" class="form-control text-box-forms correo-tel">
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-8">
+        <label for="inputOrigen" class="form-label titulos-aereos" id="telefono">Teléfono:</label>
+        <div class="input-group">
+          <input id="inputTele" class="form-control text-box-forms corre-tel">
+        </div>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-center mb-5">
+        <button class="btn btn-primary me-lg-2 mi-boton3 btn-lg" type="button">Enviar<img src="./images/rarrow.png" width="18px" style="margin-left: 8px;"></img></button>
+      </div>
+    </div>
+
+  </div>
+  <!--Termina Suscribete-->
+
+  <!--Empieza Seccion Abajo-->  
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-12 col-md-6 col-lg-3 columna3">
+        <h5 class="tercera-card-title">Contáctanos</h5>
+        <img src="../ejercicio-bootstrap/images/amatetravel.png" width="300" height="35" alt="" style="padding-right: 30px; margin-bottom: 10px;">
+        <p class="card-text" style="font-size: medium;">Estaremos encantados de ayudarte a orgainzar tu proximo viaje</p></a>
+        <p class="card-text cardlink" style="margin: 0px;"><i class="fa-solid fa-phone" style="margin-right: 5px;" ></i>+503 2510 7676</p></a>
+        <p class="card-text cardlink" style="margin: 0px;"><i class="fa-solid fa-phone" style="margin-right: 5px;" ></i>+1 424 298 0265</p>
+        
+        <div class="d-flex align-items-center gap-1">
+          <a href="https://www.instagram.com/amatetravel/" target="_blank">
+          <button class="boton-cuadrado mi-boton"><img src="./images/insta.png" width="18"></button></a>
+          <a href="https://x.com/amatetravel?mx=2" target="_blank">
+          <button class="boton-cuadrado mi-boton"><img src="./images/twitter.png" width="18"></button></a>
+          <a href="https://www.youtube.com/@amatetravel6078" target="_blank">
+          <button class="boton-cuadrado mi-boton"><img src="./images/youtube.png" width="18"></button></a>
+          <a href="https://www.linkedin.com/company/corporacion-turistica-el-amate/" target="_blank">
+          <button class="boton-cuadrado mi-boton"><img src="./images/in.png" width="18"></button></a>
+          <a href="https://www.facebook.com/amatetravel/" target="_blank">
+          <button class="boton-cuadrado mi-boton"><img src="./images/face.png" width="18"></button></a>
+          <a href="https://api.whatsapp.com/send?phone=50325107676&text=Necesito%20mas%20informaci%C3%B3n%20de%20Amate%20Travel%20-%20Amate%20Travel%20en%20https://amatetravel.com/" target="_blank">
+          <button class="boton-cuadrado mi-boton"><img src="./images/wa.png" width="18"></button></a>
+        </div>
+        
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 columna3">
+        <h5 class="tercera-card-title">Servicios <img src="../ejercicio-bootstrap/images/services.png" alt="" height="28" width="25" style="padding-bottom: 5px;"></h5>
+        <p class="card-text cardlink">Web Check-in</p></a>
+        <p class="card-text cardlink">Rastreo de Vuelos</p></a>
+        <p class="card-text cardlink">Gestion de Viajes de Negocios</p></a>
+        <p class="card-text cardlink">Grupos</p></a>
+        <p class="card-text cardlink">JMJ 2025 - Jornada Mundial de la Juventud</p></a>
+        <p class="card-text cardlink">Agencias Afiliadas</p></a>
+        <p class="card-text cardlink">Preguntas Frecuentes</p></a>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 columna3">
+        <h5 class="tercera-card-title">Descubre <img src="../ejercicio-bootstrap/images/discover.png" alt="" height="24" width="22" style="padding-bottom: 5px;"></h5>
+        <p class="card-text cardlink">Vuelos en Promociones</p></a>
+        <p class="card-text cardlink">Traslados Aeropuerto</p></a>
+        <p class="card-text cardlink">Hoteles</p></a>
+        <p class="card-text cardlink">Paquetes en El Salvador</p></a>
+        <p class="card-text cardlink">Cruceros</p></a>
+        <p class="card-text cardlink">Autos</p></a>
+        <p class="card-text cardlink">Blog</p></a>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 columna3">
+        <h5 class="tercera-card-title">Vuelos <img src="../ejercicio-bootstrap/images/planeblack.png" alt="" height="23" width="21" style="padding-bottom: 5px;"></h5>
+        <p class="card-text cardlink">Vuelos a Los Angeles</p>
+        <p class="card-text cardlink">Vuelos a Miami</p></a>
+        <p class="card-text cardlink">Vuelos a Nueva York</p></a>
+        <p class="card-text cardlink">Vuelos a Washington</p></a>
+        <p class="card-text cardlink">Vuelos a San Francisco</p></a>
+        <p class="card-text cardlink">Vuelos a Houston</p></a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid" style="background-color: #0b2e63;">
+    <p class="footnote">© 2022 <strong>Amate Travel LTN El Salvador</strong> - Todos los Derechos Reservados.</p>
+  </div>
+
+</body>
+<!-- Asi se ponen comentarios -->
+  <script>
+
+    $(document).ready(function () {
+      const name = localStorage.getItem('name');
+      const token = localStorage.getItem('token');
+      const userId = localStorage.getItem('userId');
+
+      // muestra u oculta elementos según el estado de sesion
+      if (name && token && userId) {
+        $('#navbar-user').text(`Hola, ${name}`).show();
+        $('#logoutBtn').show();
+      } else {
+        $('#navbar-user').hide();
+        $('#logoutBtn').hide();
+      }
+
+      // Funcionalidad de iniciar sesión
+      $('#loginForm').on('submit', function (e) {
+        e.preventDefault();
+
+        const email = $('#email').val();
+        const password = $('#password').val();
+
+        $.ajax({
+          url: 'https://back-ordinario-web.onrender.com/api/users/login',
+          method: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({ email, password }),
+          success: function (data) {
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('name', data.name);
+            localStorage.setItem('userId', data.userId);
+
+            $('#navbar-user').text(`Hola, ${data.name}`).show();
+            $('#logoutBtn').show();
+
+            // Cerrar modal con Bootstrap
+            const loginModal = bootstrap.Modal.getInstance($('#loginModal')[0]);
+            loginModal.hide();
+            $('body').removeClass('modal-open');
+            $('#loginModal').removeAttr('aria-hidden');
+          },
+          error: function (xhr) {
+            const res = xhr.responseJSON;
+            alert(res?.message || 'Correo o contraseña incorrecta.');
+          }
+        });
+      });
+
+      // Funcionalidad de cerrar sesión
+      $('#logoutBtn').on('click', function () {
+        localStorage.removeItem('token');
+        localStorage.removeItem('name');
+
+        $('#navbar-user').hide();
+        $('#logoutBtn').hide();
+        $('.mi-boton').show();
+
+        location.reload();
+      });
+    });
+
+
+    //RESERVACION
+    $(document).ready(function () {
+    let originsData = [];  // guardar los datos de los orígenes
+    let destinationsData = [];  // guardar los datos de los destinos
+
+    // Listar Origen 
+    $("#inputOrigenId").on("focus", function () {
+      const inputId = $(this).attr("id");
+
+      $.ajax({
+        type: "GET",
+        url: "https://back-ordinario-web.onrender.com/api/origins",
+        success: function (origen) {
+          originsData = origen; // Guardamos la respuesta de orígenes
+          let datalistId = inputId + "List";
+          $("#" + datalistId).remove();
+
+          const datalist = $("<datalist>").attr("id", datalistId);
+          origen.forEach(ori => {
+            datalist.append(`<option value="${ori.name}, ${ori.country}" data-id="${ori._id}"></option>`); // Incluimos el ID en el atributo data-id
+          });
+
+          $("body").append(datalist);
+          $("#" + inputId).attr("list", datalistId);
+        },
+        error: function () {
+          console.error("Error al obtener origen");
+        }
+      });
+    });
+
+    // Listar Destinos 
+    $("#inputDestinoId").on("focus", function () {
+      const inputId = $(this).attr("id");
+
+      $.ajax({
+        type: "GET",
+        url: "https://back-ordinario-web.onrender.com/api/destinations",
+        success: function (destinos) {
+          destinationsData = destinos; // Guardamos la respuesta de destinos
+          let datalistId = inputId + "List";
+          $("#" + datalistId).remove();
+
+          const datalist = $("<datalist>").attr("id", datalistId);
+          destinos.forEach(dest => {
+            datalist.append(`<option value="${dest.name}, ${dest.country}" data-id="${dest._id}"></option>`); // Incluimos el ID en el atributo data-id
+          });
+
+          $("body").append(datalist);
+          $("#" + inputId).attr("list", datalistId);
+        },
+        error: function () {
+          console.error("Error al obtener destinos");
+        }
+      });
+    });
+
+    // Enviar Reservación
+    $('#btnEnviar').on('click', function () {
+      const token = localStorage.getItem('token');
+      const userId = localStorage.getItem('userId');
+
+      if (!token || !userId) {
+        const loginModal = new bootstrap.Modal($('#loginModal')[0]);
+        loginModal.show();
+        return;
+      }
+
+      const originName = $('#inputOrigenId').val();
+      const destinationName = $('#inputDestinoId').val();
+
+      const originData = originsData.find(ori => `${ori.name}, ${ori.country}` === originName);
+      const destinationData = destinationsData.find(dest => `${dest.name}, ${dest.country}` === destinationName);
+
+      if (!originData || !destinationData) {
+        alert('Origen o destino inválido.');
+        return;
+      }
+
+      const originId = originData._id;  // usamos el ID del origen
+      const destinationId = destinationData._id;  // usamos el ID del destino
+      const departureDate = $('#inputFechaSalida').val();
+      const returnDate = $('#inputFechaRetorno').val();
+      const peopleCount = parseInt($('#inputPasajeros').val(), 10);
+
+      if (!originId || !destinationId || !departureDate || !returnDate || !peopleCount) {
+        alert('Por favor completa todos los campos antes de enviar la reservación.');
+        return;
+      }
+
+      const reserva = {
+    userId,
+    originId,
+    destinationId,
+    departureDate,
+    returnDate,
+    peopleCount
+  };
+
+  console.log("Datos de la reserva a enviar:", reserva);
+
+  $.ajax({
+    url: 'https://back-ordinario-web.onrender.com/api/reservas',
+    method: 'POST',
+    contentType: 'application/json',
+    headers: {
+      Authorization: `Bearer ${token}`
+    },
+    data: JSON.stringify(reserva),
+    success: function (data) {
+    const reservaId = data._id || data.reservationId;
+    alert(`¡Reservación realizada con éxito!\nTu código de reserva es: ${reservaId}`);
+      // Limpiar el formulario
+      $('#inputOrigenId').val('');
+      $('#inputDestinoId').val('');
+      $('#inputFechaSalida').val('');
+      $('#inputFechaRetorno').val('');
+      $('#inputPasajeros').val('');
+    },
+    error: function (xhr) {
+      const res = xhr.responseJSON;
+      console.error(res);  // para poder ver los detalles del error
+      alert(res?.message || 'Error al realizar la reservación.');
+    }
+    });
+    });
+  });
+
+
+
+
+
+
+  </script>
+
+
+</html>
